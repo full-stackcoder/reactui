@@ -1,19 +1,20 @@
 {
   "name": "@fullstackcoder/reactui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Production-ready React components",
   "main": "./dist/cjs/cjs_bundle.js",
   "module": "./dist/esm/esm_bundle.js",
   "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "build": "webpack --watch",
+    "build": "webpack",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests}/**/*.{js,ts,jsx,tsx}\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm run prettier && npm run lint"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/full-stackcoder/reactui.git"
   },
   "keywords": [
     "react",
@@ -23,7 +24,6 @@
   "author": "Prashan Pudasaini",
   "license": "MIT",
   "files": [
-    ".npmignore",
     "dist",
     "LICENSE",
     "README.md"

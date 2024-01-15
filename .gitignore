@@ -1,5 +1,4 @@
 node_modules
 dist
-.eslintignore
-.eslintrc
-.prettierrc.json
+.npmignore
+.DS_Store

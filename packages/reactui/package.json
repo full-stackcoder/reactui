@@ -1,0 +1,56 @@
+{
+  "name": "@fullstackcoder/reactui",
+  "version": "1.0.0",
+  "description": "Production-ready React components",
+  "main": "./dist/cjs/cjs_bundle.js",
+  "module": "./dist/esm/esm_bundle.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "webpack --watch",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests}/**/*.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run prettier && npm run lint"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": ["react", "reactui", "react-components"],
+  "author": "Prashan Pudasaini",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/react": "^18.0.27",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "node-style-loader": "^0.0.1-alpha",
+    "prettier": "^2.8.3",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.3.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  }
+}

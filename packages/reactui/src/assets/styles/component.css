@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
+@import '../theme/theme.css';
+
+/*
+  Appbar
+*/
+.fscAppbar {
+  background-color: var(--theme-color-white);
+  height: var(--theme-height-xxsmall)
+}
+.fscAppbar_static {
+  position: static;
+}
+.fscAppbar_stayOnTop {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  position: fixed;
+  top: var(--theme-spacing-none);
+  z-index: var(--theme-zIndex-over);
+  box-shadow: var( --theme-boxShadow)
+}
+
+/*
+  Avatar
+*/
+.fscAvatar_xsmall {
+  height: var(--theme-height-xsmall);
+  width: var(--theme-width-xsmall);
+}
+.fscAvatar_small {
+  height: var(--theme-height-small);
+  width: var(--theme-width-small);
+}
+.fscAvatar_medium {
+  height: var(--theme-height-medium);
+  width: var(--theme-width-medium)
+}
+.fscAvatar_large {
+  height: var(--theme-height-large);
+  width: var(--theme-width-large);
+}
+.fscAvatar_xlarge {
+  height: var(--theme-height-xlarge);
+  width: var(--theme-width-xlarge);
+}
+.fscAvatar_rounded {
+  border-radius: var(--theme-borderRadius-rounded);
+}
+
+/*
+  Button
+*/
+.fscButton {
+  cursor: pointer;
+}
+.fscButton_navButton{
+  border: var(--theme-border-dark);
+  border-radius: var(--theme-borderRadius-notSquare);
+  background-color: transparent;
+  padding: var(--theme-spacing-xxdense);
+}
+.fscButton_iconButton{
+  background-color: transparent;
+  border: none;
+  padding: var(--theme-spacing-none);
+}
+.fscButton_contained{
+  font-size: var(--theme-fontSize-sm);
+  text-transform: uppercase;
+  color: var(--theme-color-white);
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  padding: var(--theme-spacing-mdense);
+  background-color: var(--theme-color-primary);
+  clip-path: var(--theme-clipPath-clickable);
+  display: flex;
+  text-align: center;
+}
+.fscButton_disabled {
+  cursor: not-allowed;
+  opacity: var(--theme-opacity-medium);
+}
+
+/*
+  Curtain
+*/
+.fscCurtain {
+  background-color: var(--theme-color-white);
+}
+
+/*
+  Footer
+*/
+.fscFooter {
+  z-index: var( --theme-zIndex-under);
+  bottom: var(--theme-spacing-none);
+  width: var(--theme-width-full);
+}
+
+/*
+  Header
+*/
+.fscHeader {
+  background-color: var(--theme-color-white);
+}
+
+/*
+  Image
+*/
+.fscImage_darker {
+  filter: var(--theme-brightness)
+}
+
+/*
+  Link
+*/
+.fscLink {
+  max-width: fit-content;
+  width: fit-content;
+}
+.fscLink:hover {
+  opacity: var(--theme-opacity-high);
+}
+.fscLink_contained {
+  font-size: var(--theme-fontSize-xs);
+  text-transform: uppercase;
+  color: var(--theme-color-white);
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  padding: var(--theme-spacing-mdense);
+  background-color: var(--theme-color-primary);
+  clip-path: var(--theme-clipPath-clickable);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.fscLink_outlined {
+  font-size: var(--theme-fontSize-xs);
+  text-transform: uppercase;
+  color: var(--theme-color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  padding: var(--theme-spacing-mdense);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.fscLink_outlined:before {
+  content: '';
+  background: var(--theme-color-primary);
+  clip-path: var(--theme-clipPath-clickableOutlined);
+  position: absolute;
+  top: var(--theme-spacing-none);
+  left: var(--theme-spacing-none);
+  width: var(--theme-width-full);
+  height: var(--theme-height-full);
+}
+.fscLink_transparent {
+  color: var(--theme-color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--theme-fontSize-xs);
+  padding: var(--theme-spacing-none);
+  display: flex;
+}
+.fscLink_text {
+  color: var(--theme-color-primary);
+  text-decoration: none;
+  font-size: var(--theme-fontSize-md);
+  padding: var(--theme-spacing-mdense);
+  display: flex;
+}
+.fscLink_inline {
+  text-decoration: none;
+  color: var(--theme-color-primary);
+  display: inline;
+  margin-top:var(--theme-spacing-dense);
+  margin-bottom:var(--theme-spacing-dense);
+}
+.fscLink_regular {
+  background-color: var(--theme-color-primary);
+  color: var(--theme-color-white);
+  border-radius: var(--theme-borderRadius-notSquare);
+  display: flex;
+}
+
+/* Not a variant. Include this className in the component for effect */
+.fscLink_Youtube {
+  background-color: var(--theme-color-youtube);
+  color: var(--theme-color-white);
+  padding: var(--theme-spacing-mdense);
+  border-radius: var(--theme-borderRadius-notSquare);
+}
+.fscLink_Facebook {
+  background-color: var(--theme-color-facebook);
+  color: var(--theme-color-white);
+  padding: var(--theme-spacing-mdense);
+  border-radius: var(--theme-borderRadius-notSquare);
+}
+.fscLink_X {
+  background-color: var(--theme-color-x);
+  color: var(--theme-color-white);
+  padding: var(--theme-spacing-mdense);
+  border-radius: var(--theme-borderRadius-notSquare);
+}
+.fscLink_LinkedIn {
+  background-color: var(--theme-color-linkedIn);
+  color: var(--theme-color-white);
+  padding: var(--theme-spacing-mdense);
+  border-radius: var(--theme-borderRadius-notSquare);
+}
+.fscLink_Github {
+  background-color: var(--theme-color-github);
+  color: var(--theme-color-white);
+  padding: var(--theme-spacing-mdense);
+  border-radius: var(--theme-borderRadius-notSquare);
+}
+
+/*
+  List
+*/
+.fscList_listStyle__none {
+  list-style: none;
+}
+.fscList_listStyle__square {
+  list-style: square;
+}
+.fscList_listStyle__inside {
+  list-style: inside;
+}
+
+/*
+  Slideshow
+*/
+.fscSlideshow {
+  overflow: hidden;
+}
+.fscSlideshow_swipe {
+  transition: var(--theme-linearTransition);
+  -ms-overflow-style: var(--theme-msOverflowStyle);
+  scrollbar-width: var(--theme-scrollbarWidth);
+}
+.fscSlideshow_swipe::-webkit-scrollbar,
+.fscSlideshow_swipe::-webkit-scrollbar {
+  display: none;
+}
+.fscSlideshow_swipe > * {
+  width: var(--theme-width-full);
+  flex-shrink: var(--theme-flexShrink);
+  flex-grow: var(--theme-flexGrow);
+}
+
+/*
+  TextArea
+*/
+
+.fscTextArea {
+  resize: var(--theme-textArea-resize);
+}
+
+.fscTextArea_wrap {
+  position: relative;
+  overflow: hidden;
+  padding-left: var(--theme-spacing-xdense);
+  margin-top: var(--theme-spacing-dense);
+  margin-bottom: var(--theme-spacing-dense);
+}
+.fscTextArea_wrap:before {
+  content: '';
+  background: var(--theme-color-light);
+  clip-path: var(--theme-clipPath-clickableOutlined);
+  position: absolute;
+  top: var(--theme-spacing-none);
+  left: var(--theme-spacing-none);
+  width: var(--theme-width-full);
+  height: var(--theme-height-full);
+}
+.fscTextArea_outlined {
+  font-size: var(--theme-fontSize-md);
+  color: var(--theme-color-dark);
+  display: flex;
+  align-items: center;
+  padding: var(--theme-spacing-mdense) var(--theme-spacing-mdense) var(--theme-spacing-mdense) var(--theme-spacing-xxdense);
+  width: var(--theme-width-full);
+  border: none;
+  border-radius: var(--theme-borderRadius-none);
+  box-sizing: border-box;
+  background: transparent;
+}
+.fscTextArea_outlined:focus {
+  outline: var(--theme-textArea-outline);
+}
+
+/*
+  TextField
+*/
+.fscTextField_wrap {
+  position: relative;
+  overflow: hidden;
+  padding-left: var(--theme-spacing-xdense);
+  margin-top: var(--theme-spacing-dense);
+  margin-bottom: var(--theme-spacing-dense);
+}
+.fscTextField_wrap:before {
+  content: '';
+  background: var(--theme-color-light);
+  clip-path: var(--theme-clipPath-clickableOutlined);
+  position: absolute;
+  top: var(--theme-spacing-none);
+  left: var(--theme-spacing-none);
+  width: var(--theme-width-full);
+  height: var(--theme-height-full);
+}
+.fscTextField_outlined {
+  font-size: var(--theme-fontSize-md);
+  color: var(--theme-color-dark);
+  display: flex;
+  align-items: center;
+  padding: var(--theme-spacing-mdense) var(--theme-spacing-mdense) var(--theme-spacing-mdense) var(--theme-spacing-xxdense);
+  width: var(--theme-width-full);
+  border: none;
+  border-radius: var(--theme-borderRadius-none);
+  box-sizing: border-box;
+  background: transparent;
+}
+.fscTextField_outlined:focus, .fscTextField_outlined:active {
+  outline: var(--theme-textArea-outline);
+}
+
+/*
+  Toolbar
+*/
+.fscToolbar {
+  padding-top: var(--theme-spacing-dense);
+  display: flex;
+  gap: var(--theme-spacing-dense);
+  justify-content: end
+}
+
+/*
+  Media Queries
+*/
+@media only screen and (max-width: 768px) {
+  .fscAppbar_mobileMenu {
+    background-color: var(--theme-color-white);
+    z-index: var(--theme-zIndex-over);
+    width: -webkit-fill-available;
+    width: -moz-available;
+    box-shadow: var(--theme-boxShadow);
+  }
+}

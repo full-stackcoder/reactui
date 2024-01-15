@@ -24,7 +24,7 @@ const Slideshow = ({ className, children, variant, data, ...props }: SlideshowPr
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children ? children.length : 0)
-  const [touchPosition, setTouchPosition] = useState<number | null>(null);
+  const [touchPosition, setTouchPosition] = useState<number | null>(null)
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     const touchDown = event.touches[0].clientX
@@ -32,20 +32,20 @@ const Slideshow = ({ className, children, variant, data, ...props }: SlideshowPr
   }
 
   const handleTouchMove = (event: React.TouchEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const touchDown = touchPosition;
+    event.preventDefault()
+    const touchDown = touchPosition
     if (touchDown === null) {
-      return;
+      return
     }
-    const currentTouch = 'touches' in event ? event.touches[0].clientX : event.clientX;
-    const diff = touchDown - currentTouch;
+    const currentTouch = 'touches' in event ? event.touches[0].clientX : event.clientX
+    const diff = touchDown - currentTouch
     if (diff > 5) {
-      next();
+      next()
     }
     if (diff < -5) {
-      prev();
+      prev()
     }
-    setTouchPosition(null);
+    setTouchPosition(null)
   }
 
   const next = () => {
@@ -74,7 +74,7 @@ const Slideshow = ({ className, children, variant, data, ...props }: SlideshowPr
     <>
       <Box {...props} className={classNames} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
         <Box display='flex' className='fscSlideshow_swipe' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {children}          
+          {children}
         </Box>
 
         {/* Nav buttons */}

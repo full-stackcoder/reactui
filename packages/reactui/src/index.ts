@@ -6,6 +6,7 @@ import './assets/theme/theme.css'
 /* Custom components */
 import Anchor from './components/custom/Anchor/Anchor'
 import Appbar from './components/custom/Appbar/Appbar'
+import AppbarMobile from './components/custom/Appbar/AppbarMobile'
 import Avatar from './components/custom/Avatar/Avatar'
 import Box from './components/custom/Box/Box'
 import Button from './components/custom/Button/Button'
@@ -14,6 +15,7 @@ import CardContent from './components/custom/Card/CardContent'
 import CardFooter from './components/custom/Card/CardFooter'
 import CardHeader from './components/custom/Card/CardHeader'
 import CardMedia from './components/custom/Card/CardMedia'
+import Container from './components/custom/Container/Container'
 import Curtain from './components/custom/Curtain/Curtain'
 import Footer from './components/custom/Footer/Footer'
 import Form from './components/custom/Form/Form'
@@ -97,6 +99,7 @@ export {
   //Custom components
   Anchor,
   Appbar,
+  AppbarMobile,
   Avatar,
   Box,
   Button,
@@ -105,6 +108,7 @@ export {
   CardFooter,
   CardHeader,
   CardMedia,
+  Container,
   Curtain,
   Footer,
   Form,

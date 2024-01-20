@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react'
-
 import Box from '../Box/Box'
 import Button from '../Button/Button'
-
 import { LeftArrowOutlinedIcon } from '../../icons/interface_icons/LeftArrowIcon'
 import { RightArrowOutlinedIcon } from '../../icons/interface_icons/RightArrowIcon'
 import { SquareFilledIcon } from '../../icons/interface_icons/SquareIcon'
-
-import useMediaQuery from '../../utils/useMediaQuery'
 import withLayout from '../../utils/withLayout'
 
 interface SlideshowProps {
@@ -18,10 +14,6 @@ interface SlideshowProps {
 }
 
 const Slideshow = ({ className, children, variant, data, ...props }: SlideshowProps) => {
-  const isSmScreen = useMediaQuery({
-    query: { media: '(max-width: 768px)' },
-  })
-
   const [currentIndex, setCurrentIndex] = useState(0)
   const [length, setLength] = useState(children ? children.length : 0)
   const [touchPosition, setTouchPosition] = useState<number | null>(null)
@@ -80,7 +72,7 @@ const Slideshow = ({ className, children, variant, data, ...props }: SlideshowPr
         {/* Nav buttons */}
         <Box
           display='flex'
-          justifyContent={isSmScreen || variant === 'brief' ? 'center' : 'start'}
+          className={variant === 'brief' ? 'fscSlideshow_navigation__brief' : 'fscSlideshow_navigation__detail'}
           mt={variant === 'brief' ? 'none' : 'xdense'}
         >
           <Box display='flex' alignItems='center' gap='xdense' justifyContent='center'>

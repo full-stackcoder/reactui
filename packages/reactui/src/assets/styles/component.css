@@ -6,10 +6,7 @@
 */
 .fscAppbar {
   background-color: var(--theme-color-white);
-  height: var(--theme-height-xxsmall)
-}
-.fscAppbar_static {
-  position: static;
+  height: var(--theme-height-xxsmall);
 }
 .fscAppbar_stayOnTop {
   width: -webkit-fill-available;
@@ -18,6 +15,14 @@
   top: var(--theme-spacing-none);
   z-index: var(--theme-zIndex-over);
   box-shadow: var( --theme-boxShadow)
+}
+.fscAppbar_static {
+  position: static;
+}
+.fscAppbarMobile {
+  display:none;
+  background-color: var(--theme-color-white);
+  height: var(--theme-height-xxsmall)
 }
 
 /*
@@ -84,10 +89,19 @@
 }
 
 /*
+  Container
+*/
+.fscContainer {
+  padding-right:var(--theme-spacing-wide);
+  padding-left:var(--theme-spacing-wide);
+}
+
+/*
   Curtain
 */
 .fscCurtain {
   background-color: var(--theme-color-white);
+  margin-bottom: var(--theme-spacing-uwide);
 }
 
 /*
@@ -255,6 +269,12 @@
   flex-shrink: var(--theme-flexShrink);
   flex-grow: var(--theme-flexGrow);
 }
+.fscSlideshow_navigation__detail {
+  justify-content: start;
+}
+.fscSlideshow_navigation__brief {
+  justify-content: center;
+}
 
 /*
   TextArea
@@ -340,18 +360,55 @@
   padding-top: var(--theme-spacing-dense);
   display: flex;
   gap: var(--theme-spacing-dense);
-  justify-content: end
+  justify-content: end;
 }
 
 /*
-  Media Queries
+  ---------------------------------------------------------------
+  ------------------------- Media Queries 1280px ----------------
+  ---------------------------------------------------------------
+*/
+@media only screen and (max-width: 1280px) {
+  .fscContainer {
+    padding-right:var(--theme-spacing-normal);
+    padding-left:var(--theme-spacing-normal);
+  }
+  .fscToolbar {
+    padding-right:var(--theme-spacing-normal);
+    padding-left:var(--theme-spacing-normal);
+  }
+}
+
+/*
+  ---------------------------------------------------------------
+  ------------------------- Media Queries 768px -----------------
+  ---------------------------------------------------------------
 */
 @media only screen and (max-width: 768px) {
+  .fscAppbar {
+    display:none;
+  }
+  .fscAppbarMobile {
+    display:flex;
+  }
   .fscAppbar_mobileMenu {
     background-color: var(--theme-color-white);
     z-index: var(--theme-zIndex-over);
     width: -webkit-fill-available;
     width: -moz-available;
     box-shadow: var(--theme-boxShadow);
+  }
+  .fscContainer {
+    padding-right:var(--theme-spacing-dense);
+    padding-left:var(--theme-spacing-dense);
+  }
+  .fscCurtain {
+    margin-bottom: var(--theme-spacing-none);
+  }
+  .fscSlideshow_navigation__detail {
+    justify-content: center;
+  }
+  .fscToolbar {
+    display:none;
   }
 }

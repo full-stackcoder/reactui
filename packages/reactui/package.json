@@ -1,6 +1,6 @@
 {
   "name": "@fullstackcoder/reactui",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Production-ready React components",
   "main": "./dist/cjs/cjs_bundle.js",
   "module": "./dist/esm/esm_bundle.js",

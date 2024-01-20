@@ -2,6 +2,7 @@ import './assets/styles/base.css'
 import './assets/styles/component.css'
 import './assets/styles/layout.css'
 import './assets/theme/theme.css'
+
 /* Custom components */
 import Anchor from './components/custom/Anchor/Anchor'
 import Appbar from './components/custom/Appbar/Appbar'

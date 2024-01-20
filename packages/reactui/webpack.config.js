@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = [
   {
@@ -46,10 +47,15 @@ module.exports = [
         {
           test: /\.css$/,
           exclude: /node_modules/,
-          use: ['node-style-loader', 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
       ],
     },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: "node-styles.css",
+      }),
+    ],
   },
 
   {
@@ -91,12 +97,17 @@ module.exports = [
         {
           test: /\.css$/,
           exclude: /node_modules/,
-          use: ['style-loader', 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
       ],
     },
     experiments: {
       outputModule: true,
     },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: "web-styles.css",
+      }),
+    ],
   },
 ]
